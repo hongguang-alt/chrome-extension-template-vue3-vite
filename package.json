@@ -1,0 +1,12 @@
+{
+  "name": "chrome-extension-template-vue3-vite",
+  "version": "0.0.1",
+  "description": "chrome extension template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
