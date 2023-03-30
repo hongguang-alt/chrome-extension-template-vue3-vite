@@ -5,7 +5,7 @@ const root = resolve(__dirname, "src");
 const assetsDir = resolve(root, "assets");
 const pages = resolve(root, "pages");
 const outDir = resolve(__dirname, "dist");
-const publicDir = resolve(__dirname, "public");
+// const publicDir = resolve(__dirname, "public");
 
 export default defineConfig({
   resolve: {
@@ -15,13 +15,12 @@ export default defineConfig({
       "@assets": assetsDir,
     },
   },
-  publicDir,
   build: {
     outDir,
     rollupOptions: {
+      // 这些都是入口
       input: {
         content: resolve(pages, "content", "index.ts"),
-        contentStyle: resolve(pages, "content", "index.less"),
         background: resolve(pages, "background", "index.ts"),
         popup: resolve(pages, "popup", "index.html"),
         newtab: resolve(pages, "newtab", "index.html"),
@@ -30,6 +29,11 @@ export default defineConfig({
       },
       output: {
         entryFileNames: "src/pages/[name]/index.js",
+        chunkFileNames: "assets/js/[name].[hash].js",
+        assetFileNames: (assetInfo) => {
+          console.log(assetInfo);
+          return `assets/[ext]/${assetInfo.name}.chunk.[ext]`;
+        },
       },
     },
   },
