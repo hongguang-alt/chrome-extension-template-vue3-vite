@@ -10,19 +10,18 @@ const manifest: ManifestType = {
   background: { service_worker: "src/background/index.js" },
   action: {
     default_popup: "src/popup/index.html",
-    default_icon: "assets/icon-34.png",
+    default_icon: "icon-34.png",
   },
   chrome_url_overrides: {
     newtab: "src/newtab/index.html",
   },
   icons: {
-    "128": "assets/icon-128.png",
+    "128": "icon-128.png",
   },
   content_scripts: [
     {
       matches: ["http://*/*", "https://*/*", "<all_urls>"],
       js: ["src/content/index.js"],
-      css: ["src/content/index.css"],
     },
   ],
   devtools_page: "src/devtools/index.html",
