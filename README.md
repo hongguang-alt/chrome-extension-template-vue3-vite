@@ -34,6 +34,6 @@ pnpm run build
 
 #### 其实我在想另一件事情，vite 使用 build 不也是 Bundle 方式么，那还不如使用 webpack 呢，何必使用 rollup ？
 
-#### TOTO
+#### TODO
 - [] 实现热更新
 - [] 支持注入css
