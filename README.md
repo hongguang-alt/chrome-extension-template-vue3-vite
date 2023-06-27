@@ -30,9 +30,6 @@ pnpm run build
 ```
 在 chrome 插件中打开开发者模式，然后将这个项目打包的dist目录导入进去
 
-### 困惑和TODO
-
-#### 其实我在想另一件事情，vite 使用 build 不也是 Bundle 方式么，那还不如使用 webpack 呢，何必使用 rollup ？
 
 #### TODO
 - [] 实现热更新
